@@ -28,7 +28,7 @@
   </filter-mapping>
 
   <listener>
-    <description>启动spri ng容器</description>
+    <description>启动spring容器</description>
     <listener-class>com.yijun.vip.web.listener.ApplicationListener</listener-class>
   </listener>
   <context-param>

@@ -5,7 +5,7 @@
 %>
 <html>
 <head>
-    <title>Title</title>
+    <title>会员管理</title>
     <base href="<%=contextPath%>/">
     <script src="static/jquery/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css">

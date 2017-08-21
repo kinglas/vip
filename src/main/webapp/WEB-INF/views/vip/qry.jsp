@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <base href="<%=contextPath%>/">
-    <title>Title</title>
+    <title>会员查询</title>
 </head>
 <body>
     <header>
