@@ -8,29 +8,13 @@
     <title>Title</title>
     <base href="<%=contextPath%>/">
     <script src="static/jquery/jquery-3.2.1.min.js"></script>
-    <style>
-        table{
-            border-collapse: collapse;
-            border: solid blue;
-        }
-        td{
-            width: auto;
-            text-align: center;
-            border: solid blue;
-            /*border-collapse:collapse;*/
-        }
-        .taglines>td{
-            color: blue;
-        }
-        button{
-            color: #2aabd2;
-        }
-    </style>
+    <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 </head>
-<body>
-    <table>
-        <table>
-            <tr class="taglines">
+<body class="container">
+<br>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr >
                 <td>姓名</td>
                 <td>年龄</td>
                 <td>性别</td>
@@ -43,6 +27,8 @@
                 <td>备注</td>
                 <td>操作</td>
             </tr>
+        </thead>
+        <tbody>
             <c:forEach items="${vips}" var="item">
             <tr>
                 <td class="code">${item.code}</td>
@@ -55,14 +41,14 @@
                 <td>${item.zip}</td>
                 <td>${item.level}</td>
                 <td>${item.money}</td>
-                <td style="width: 200px;text-align: left">${item.remark}</td>
+                <td>${item.remark}</td>
                 <td>
-                    <button class="deleteVip">删除</button>
-                    //<button class="vipEdit">编辑</button>
+                    <button type="button" class="btn btn-danger deleteVip">删除</button>
+                    <button type="button" class="btn btn-info vipEdit">修改</button>
                 </td>
             </tr>
             </c:forEach>
-        </table>
+        </tbody>
     </table>
 </body>
 <script>

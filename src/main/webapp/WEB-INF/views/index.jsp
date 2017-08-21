@@ -10,6 +10,7 @@
 <head>
     <meta charset="utf-8">
     <title>Title</title>
+    <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <style>
         menu,h1,ul{
             margin: 0;
@@ -18,10 +19,9 @@
             margin: 0;
             height: 100%;
             font-size: 14px;
-            background-image: url("/images/gray.jpeg");
         }
         body>header{
-            line-height: 80px;
+            /*line-height: 80px;*/
             text-align: center;
             background: #999999;
         }
@@ -61,15 +61,25 @@
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>佳佳乐VIP消费查询系统</h1>
-        <span>
-            <b>${sessionScope.currentUser.name}!</b>
-            <a href="logout.do">退出登录</a>
-        </span>
+<body >
+    <div class="bg-info">
+    <header class="bg-info">
+        <nav class="bg-info navbar navbar-fixed-top" role="navigation">
+            <div class="container-fluid" style="height: 79px">
+                <div class="btn-Submit navbar-center">
+                    <!--调查标题-->
+                    <div class="navbar-brands" style="text-align: center;font-size:x-large;">佳佳乐VIP消费查询系统</div>
+                    <div style="margin-left: 700px;margin-top: 10px">
+                        <span>
+                            <b style="color: red">${sessionScope.currentUser.name}!</b>
+                            <a href="logout.do">退出登录</a>
+                         </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-    <section class="body">
+    <section class="container body">
         <menu>
             <ul>
                 <li>
@@ -99,6 +109,6 @@
             <iframe name="mainFrame" src="welcome.do"></iframe>
         </main>
     </section>
-
+    </div>
 </body>
 </html>
